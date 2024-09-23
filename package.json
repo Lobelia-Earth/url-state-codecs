@@ -1,0 +1,81 @@
+{
+  "name": "@lobelia-earth/url-state-codecs",
+  "version": "1.0.0",
+  "description": "Codecs for encoding arbitrary state trees into URL parameters and back again.",
+  "keywords": [
+    "application state",
+    "tree",
+    "parameters",
+    "URLSearchParams",
+    "encode",
+    "decode",
+    "codec",
+    "serialize",
+    "deserialize",
+    "immutable",
+    "type-safe",
+    "TypeScript"
+  ],
+  "exports": {
+    ".": "./dist/main.js",
+    "./base64Json": "./dist/codecs/base64JsonCodec.js",
+    "./boolean": "./dist/codecs/booleanCodec.js",
+    "./iso8601Date": "./dist/codecs/iso8601DateCodec.js",
+    "./number": "./dist/codecs/numberCodec.js",
+    "./string": "./dist/codecs/stringCodec.js",
+    "./wrappers/arrayOf": "./dist/codecs/wrappers/arrayOf.js",
+    "./wrappers/nullable": "./dist/codecs/wrappers/nullable.js",
+    "./wrappers/withDeflateRaw": "./dist/codecs/wrappers/withDeflateRaw.js",
+    "./wrappers/withNaN": "./dist/codecs/wrappers/withNaN.js"
+  },
+  "type": "module",
+  "types": "./dist/main.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "esbuild.metafile.*"
+  ],
+  "scripts": {
+    "stylecheck": "prettier --check src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --typecheck --coverage",
+    "test:dev": "vitest dev --typecheck --coverage",
+    "build": "npm run stylecheck && npm run typecheck && npm run test && node ./esbuild.js && tsc --project tsconfig.build.json",
+    "demo": "vitest run --dir ./src/demo",
+    "preversion": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "contributors": [
+    {
+      "name": "Adam Shaylor",
+      "email": "adam.shaylor@lobelia.earth"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/lobelia-earth/url-state-codecs#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lobelia-earth/url-state-codecs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lobelia-earth/url-state-codecs/issues"
+  },
+  "volta": {
+    "node": "20.17.0",
+    "npm": "10.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.5",
+    "@types/pako": "^2.0.3",
+    "@vitest/coverage-v8": "2.1.1",
+    "esbuild": "^0.23.1",
+    "prettier": "^3.3.3",
+    "type-fest": "^4.26.1",
+    "typescript": "^5.6.2",
+    "vitest": "2.1.1"
+  },
+  "dependencies": {
+    "fast-json-patch": "^3.1.1",
+    "pako": "^2.1.0"
+  }
+}

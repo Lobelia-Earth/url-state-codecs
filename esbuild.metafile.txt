@@ -1,0 +1,64 @@
+
+  dist/main.js                   2.1kb  100.0%
+   ├ src/main.ts                 1.5kb   70.6%
+   ├ src/lib/deepGetSet.ts       299b    14.0%
+   ├ src/lib/urlSearchParams.ts  177b     8.3%
+   ├ src/lib/result.ts            49b     2.3%
+   └ src/lib/arrayIsNotEmpty.ts   24b     1.1%
+
+
+  dist/codecs/base64JsonCodec.js    1.1kb  100.0%
+   ├ src/codecs/base64JsonCodec.ts  515b    46.9%
+   ├ src/lib/deepEquals.ts          468b    42.6%
+   └ src/lib/result.ts               49b     4.5%
+
+
+  dist/codecs/booleanCodec.js    467b   100.0%
+   ├ src/codecs/booleanCodec.ts  320b    68.5%
+   └ src/lib/result.ts            49b    10.5%
+
+
+  dist/codecs/iso8601DateCodec.js    582b   100.0%
+   ├ src/codecs/iso8601DateCodec.ts  466b    80.1%
+   └ src/lib/result.ts                49b     8.4%
+
+
+  dist/codecs/numberCodec.js    706b   100.0%
+   ├ src/codecs/numberCodec.ts  595b    84.3%
+   └ src/lib/result.ts           49b     6.9%
+
+
+  dist/codecs/stringCodec.js    432b   100.0%
+   ├ src/codecs/stringCodec.ts  321b    74.3%
+   └ src/lib/result.ts           49b    11.3%
+
+
+  dist/codecs/wrappers/arrayOf.js    1.2kb  100.0%
+   ├ src/codecs/wrappers/arrayOf.ts  1.1kb   91.1%
+   └ src/lib/result.ts                49b     4.1%
+
+
+  dist/codecs/wrappers/nullable.js    255b   100.0%
+   ├ src/codecs/wrappers/nullable.ts  148b    58.0%
+   └ src/lib/result.ts                 26b    10.2%
+
+
+  dist/codecs/wrappers/withDeflateRaw.js    46.6kb  100.0%
+   ├ node_modules/pako/dist/pako.esm.mjs    45.9kb   98.5%
+   ├ src/codecs/wrappers/withDeflateRaw.ts   473b     1.0%
+   └ src/lib/result.ts                        51b     0.1%
+
+
+  dist/codecs/wrappers/withNaN.js    268b   100.0%
+   ├ src/codecs/wrappers/withNaN.ts  163b    60.8%
+   └ src/lib/result.ts                26b     9.7%
+
+
+  dist/codecs/wrappers/withRfc6902JsonPatch.js        11.2kb  100.0%
+   ├ node_modules/fast-json-patch/module/core.mjs      6.2kb   54.9%
+   ├ node_modules/fast-json-patch/module/duplex.mjs    2.2kb   19.7%
+   ├ node_modules/fast-json-patch/module/helpers.mjs   1.6kb   14.4%
+   ├ src/codecs/wrappers/withRfc6902JsonPatch.ts       551b     4.8%
+   ├ node_modules/fast-json-patch/index.mjs            106b     0.9%
+   ├ src/lib/result.ts                                  49b     0.4%
+   └ src/lib/deepCopyJson.ts                            45b     0.4%
