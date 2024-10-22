@@ -74,6 +74,9 @@ See [the demo directory](./src/demo) for additional examples written as end-to-e
 
 ## Contributing
 
-- Please keep the level of type safety as high or higher than you found it.
-- Please make sure that new code is reasonably covered by tests and that unit tests pass.
-- If you need to export any additional modules (e.g. new codecs or wrappers), you will need to modify [esbuild.js](./esbuild.js) and `"exports"` in [package.json](./package.json).
+Please...
+
+- File an issue before opening a PR. If you want to make a significant change, discuss it with designated maintainers first.
+- Keep the level of type safety as high or higher than you found it.
+- Make sure that new code is reasonably covered by tests and that unit tests pass.
+- If you need to export any additional modules (e.g. new codecs or wrappers), modify [esbuild.js](./esbuild.js) and `"exports"` in [package.json](./package.json) accordingly.
