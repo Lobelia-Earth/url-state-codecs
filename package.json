@@ -70,12 +70,12 @@
     "@vitest/coverage-v8": "2.1.1",
     "esbuild": "^0.23.1",
     "prettier": "^3.3.3",
-    "type-fest": "^4.26.1",
     "typescript": "^5.6.2",
     "vitest": "2.1.1"
   },
   "dependencies": {
     "fast-json-patch": "^3.1.1",
-    "pako": "^2.1.0"
+    "pako": "^2.1.0",
+    "type-fest": "^4.26.1"
   }
 }
