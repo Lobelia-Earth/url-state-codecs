@@ -1,0 +1,609 @@
+{
+  "inputs": {
+    "src/lib/deepGetSet.ts": {
+      "bytes": 3564,
+      "imports": [],
+      "format": "esm"
+    },
+    "src/lib/result.ts": {
+      "bytes": 1739,
+      "imports": [],
+      "format": "esm"
+    },
+    "src/lib/arrayIsNotEmpty.ts": {
+      "bytes": 1006,
+      "imports": [],
+      "format": "esm"
+    },
+    "src/lib/urlSearchParams.ts": {
+      "bytes": 789,
+      "imports": [
+        {
+          "path": "./types",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "src/main.ts": {
+      "bytes": 7140,
+      "imports": [
+        {
+          "path": "./lib/types",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "src/lib/deepGetSet.ts",
+          "kind": "import-statement",
+          "original": "./lib/deepGetSet"
+        },
+        {
+          "path": "src/lib/result.ts",
+          "kind": "import-statement",
+          "original": "./lib/result"
+        },
+        {
+          "path": "src/lib/arrayIsNotEmpty.ts",
+          "kind": "import-statement",
+          "original": "./lib/arrayIsNotEmpty"
+        },
+        {
+          "path": "src/lib/urlSearchParams.ts",
+          "kind": "import-statement",
+          "original": "./lib/urlSearchParams"
+        },
+        {
+          "path": "src/lib/result.ts",
+          "kind": "import-statement",
+          "original": "./lib/result"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/lib/deepEquals.ts": {
+      "bytes": 2149,
+      "imports": [],
+      "format": "esm"
+    },
+    "src/codecs/base64JsonCodec.ts": {
+      "bytes": 2416,
+      "imports": [
+        {
+          "path": "../lib/types",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "src/lib/deepEquals.ts",
+          "kind": "import-statement",
+          "original": "../lib/deepEquals"
+        },
+        {
+          "path": "src/lib/result.ts",
+          "kind": "import-statement",
+          "original": "../lib/result"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/codecs/booleanCodec.ts": {
+      "bytes": 933,
+      "imports": [
+        {
+          "path": "../lib/types",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "src/lib/result.ts",
+          "kind": "import-statement",
+          "original": "../lib/result"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/codecs/iso8601DateCodec.ts": {
+      "bytes": 1645,
+      "imports": [
+        {
+          "path": "../lib/types",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "src/lib/result.ts",
+          "kind": "import-statement",
+          "original": "../lib/result"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/codecs/numberCodec.ts": {
+      "bytes": 1503,
+      "imports": [
+        {
+          "path": "../lib/types",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "src/lib/result.ts",
+          "kind": "import-statement",
+          "original": "../lib/result"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/codecs/stringCodec.ts": {
+      "bytes": 917,
+      "imports": [
+        {
+          "path": "src/lib/result.ts",
+          "kind": "import-statement",
+          "original": "../lib/result"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/codecs/wrappers/arrayOf.ts": {
+      "bytes": 4748,
+      "imports": [
+        {
+          "path": "type-fest",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "../../lib/types",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "src/lib/result.ts",
+          "kind": "import-statement",
+          "original": "../../lib/result"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/codecs/wrappers/nullable.ts": {
+      "bytes": 1005,
+      "imports": [
+        {
+          "path": "../../lib/types",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "src/lib/result.ts",
+          "kind": "import-statement",
+          "original": "../../lib/result"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/pako/dist/pako.esm.mjs": {
+      "bytes": 226347,
+      "imports": [],
+      "format": "esm"
+    },
+    "src/codecs/wrappers/withDeflateRaw.ts": {
+      "bytes": 1746,
+      "imports": [
+        {
+          "path": "../../lib/types",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "src/lib/result.ts",
+          "kind": "import-statement",
+          "original": "../../lib/result"
+        },
+        {
+          "path": "node_modules/pako/dist/pako.esm.mjs",
+          "kind": "import-statement",
+          "original": "pako"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/codecs/wrappers/withNaN.ts": {
+      "bytes": 954,
+      "imports": [
+        {
+          "path": "../../lib/types",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "src/lib/result.ts",
+          "kind": "import-statement",
+          "original": "../../lib/result"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/fast-json-patch/module/helpers.mjs": {
+      "bytes": 5360,
+      "imports": [],
+      "format": "esm"
+    },
+    "node_modules/fast-json-patch/module/core.mjs": {
+      "bytes": 20347,
+      "imports": [
+        {
+          "path": "node_modules/fast-json-patch/module/helpers.mjs",
+          "kind": "import-statement",
+          "original": "./helpers.mjs"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/fast-json-patch/module/duplex.mjs": {
+      "bytes": 6294,
+      "imports": [
+        {
+          "path": "node_modules/fast-json-patch/module/helpers.mjs",
+          "kind": "import-statement",
+          "original": "./helpers.mjs"
+        },
+        {
+          "path": "node_modules/fast-json-patch/module/core.mjs",
+          "kind": "import-statement",
+          "original": "./core.mjs"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/fast-json-patch/index.mjs": {
+      "bytes": 659,
+      "imports": [
+        {
+          "path": "node_modules/fast-json-patch/module/core.mjs",
+          "kind": "import-statement",
+          "original": "./module/core.mjs"
+        },
+        {
+          "path": "node_modules/fast-json-patch/module/duplex.mjs",
+          "kind": "import-statement",
+          "original": "./module/duplex.mjs"
+        },
+        {
+          "path": "node_modules/fast-json-patch/module/helpers.mjs",
+          "kind": "import-statement",
+          "original": "./module/helpers.mjs"
+        },
+        {
+          "path": "node_modules/fast-json-patch/module/core.mjs",
+          "kind": "import-statement",
+          "original": "./module/core.mjs"
+        },
+        {
+          "path": "node_modules/fast-json-patch/module/duplex.mjs",
+          "kind": "import-statement",
+          "original": "./module/duplex.mjs"
+        },
+        {
+          "path": "node_modules/fast-json-patch/module/helpers.mjs",
+          "kind": "import-statement",
+          "original": "./module/helpers.mjs"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/lib/deepCopyJson.ts": {
+      "bytes": 248,
+      "imports": [],
+      "format": "esm"
+    },
+    "src/codecs/wrappers/withRfc6902JsonPatch.ts": {
+      "bytes": 2426,
+      "imports": [
+        {
+          "path": "node_modules/fast-json-patch/index.mjs",
+          "kind": "import-statement",
+          "original": "fast-json-patch"
+        },
+        {
+          "path": "../../lib/types",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "src/lib/result.ts",
+          "kind": "import-statement",
+          "original": "../../lib/result"
+        },
+        {
+          "path": "src/lib/deepCopyJson.ts",
+          "kind": "import-statement",
+          "original": "../../lib/deepCopyJson"
+        }
+      ],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    "dist/main.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 18678
+    },
+    "dist/main.js": {
+      "imports": [],
+      "exports": [
+        "defineState",
+        "error",
+        "ok"
+      ],
+      "entryPoint": "src/main.ts",
+      "inputs": {
+        "src/lib/deepGetSet.ts": {
+          "bytesInOutput": 299
+        },
+        "src/lib/result.ts": {
+          "bytesInOutput": 49
+        },
+        "src/lib/arrayIsNotEmpty.ts": {
+          "bytesInOutput": 24
+        },
+        "src/lib/urlSearchParams.ts": {
+          "bytesInOutput": 177
+        },
+        "src/main.ts": {
+          "bytesInOutput": 1503
+        }
+      },
+      "bytes": 2130
+    },
+    "dist/codecs/base64JsonCodec.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 8634
+    },
+    "dist/codecs/base64JsonCodec.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "src/codecs/base64JsonCodec.ts",
+      "inputs": {
+        "src/lib/deepEquals.ts": {
+          "bytesInOutput": 468
+        },
+        "src/lib/result.ts": {
+          "bytesInOutput": 49
+        },
+        "src/codecs/base64JsonCodec.ts": {
+          "bytesInOutput": 515
+        }
+      },
+      "bytes": 1098
+    },
+    "dist/codecs/booleanCodec.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 3642
+    },
+    "dist/codecs/booleanCodec.js": {
+      "imports": [],
+      "exports": [
+        "default",
+        "encodedFalse",
+        "encodedTrue"
+      ],
+      "entryPoint": "src/codecs/booleanCodec.ts",
+      "inputs": {
+        "src/lib/result.ts": {
+          "bytesInOutput": 49
+        },
+        "src/codecs/booleanCodec.ts": {
+          "bytesInOutput": 320
+        }
+      },
+      "bytes": 467
+    },
+    "dist/codecs/iso8601DateCodec.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 4562
+    },
+    "dist/codecs/iso8601DateCodec.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "src/codecs/iso8601DateCodec.ts",
+      "inputs": {
+        "src/lib/result.ts": {
+          "bytesInOutput": 49
+        },
+        "src/codecs/iso8601DateCodec.ts": {
+          "bytesInOutput": 466
+        }
+      },
+      "bytes": 582
+    },
+    "dist/codecs/numberCodec.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 4395
+    },
+    "dist/codecs/numberCodec.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "src/codecs/numberCodec.ts",
+      "inputs": {
+        "src/lib/result.ts": {
+          "bytesInOutput": 49
+        },
+        "src/codecs/numberCodec.ts": {
+          "bytesInOutput": 595
+        }
+      },
+      "bytes": 706
+    },
+    "dist/codecs/stringCodec.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 3597
+    },
+    "dist/codecs/stringCodec.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "src/codecs/stringCodec.ts",
+      "inputs": {
+        "src/lib/result.ts": {
+          "bytesInOutput": 49
+        },
+        "src/codecs/stringCodec.ts": {
+          "bytesInOutput": 321
+        }
+      },
+      "bytes": 432
+    },
+    "dist/codecs/wrappers/arrayOf.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 8812
+    },
+    "dist/codecs/wrappers/arrayOf.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "src/codecs/wrappers/arrayOf.ts",
+      "inputs": {
+        "src/lib/result.ts": {
+          "bytesInOutput": 49
+        },
+        "src/codecs/wrappers/arrayOf.ts": {
+          "bytesInOutput": 1098
+        }
+      },
+      "bytes": 1205
+    },
+    "dist/codecs/wrappers/nullable.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 3463
+    },
+    "dist/codecs/wrappers/nullable.js": {
+      "imports": [],
+      "exports": [
+        "default",
+        "encodedNullValue"
+      ],
+      "entryPoint": "src/codecs/wrappers/nullable.ts",
+      "inputs": {
+        "src/lib/result.ts": {
+          "bytesInOutput": 26
+        },
+        "src/codecs/wrappers/nullable.ts": {
+          "bytesInOutput": 148
+        }
+      },
+      "bytes": 255
+    },
+    "dist/codecs/wrappers/withDeflateRaw.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 321246
+    },
+    "dist/codecs/wrappers/withDeflateRaw.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "src/codecs/wrappers/withDeflateRaw.ts",
+      "inputs": {
+        "src/lib/result.ts": {
+          "bytesInOutput": 51
+        },
+        "node_modules/pako/dist/pako.esm.mjs": {
+          "bytesInOutput": 47036
+        },
+        "src/codecs/wrappers/withDeflateRaw.ts": {
+          "bytesInOutput": 473
+        }
+      },
+      "bytes": 47762
+    },
+    "dist/codecs/wrappers/withNaN.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 3430
+    },
+    "dist/codecs/wrappers/withNaN.js": {
+      "imports": [],
+      "exports": [
+        "default",
+        "encodedNaNValue"
+      ],
+      "entryPoint": "src/codecs/wrappers/withNaN.ts",
+      "inputs": {
+        "src/lib/result.ts": {
+          "bytesInOutput": 26
+        },
+        "src/codecs/wrappers/withNaN.ts": {
+          "bytesInOutput": 163
+        }
+      },
+      "bytes": 268
+    },
+    "dist/codecs/wrappers/withRfc6902JsonPatch.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 55241
+    },
+    "dist/codecs/wrappers/withRfc6902JsonPatch.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "src/codecs/wrappers/withRfc6902JsonPatch.ts",
+      "inputs": {
+        "node_modules/fast-json-patch/module/core.mjs": {
+          "bytesInOutput": 6309
+        },
+        "node_modules/fast-json-patch/module/helpers.mjs": {
+          "bytesInOutput": 1655
+        },
+        "node_modules/fast-json-patch/index.mjs": {
+          "bytesInOutput": 106
+        },
+        "node_modules/fast-json-patch/module/duplex.mjs": {
+          "bytesInOutput": 2266
+        },
+        "src/lib/result.ts": {
+          "bytesInOutput": 49
+        },
+        "src/lib/deepCopyJson.ts": {
+          "bytesInOutput": 45
+        },
+        "src/codecs/wrappers/withRfc6902JsonPatch.ts": {
+          "bytesInOutput": 551
+        }
+      },
+      "bytes": 11483
+    }
+  }
+}
