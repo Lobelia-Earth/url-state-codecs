@@ -56,7 +56,7 @@ const primitiveArraysAreEqual = <T extends Primitive>(
  *
  * can be represented with this wrapper and the separator `x` as:
  *
- * ```
+ * ```txt
  * ?center=42.4027x2.1563
  * ```
  */
