@@ -148,7 +148,7 @@
       "format": "esm"
     },
     "src/codecs/wrappers/arrayOf.ts": {
-      "bytes": 4748,
+      "bytes": 4751,
       "imports": [
         {
           "path": "type-fest",
@@ -479,7 +479,7 @@
       "imports": [],
       "exports": [],
       "inputs": {},
-      "bytes": 8812
+      "bytes": 8815
     },
     "dist/codecs/wrappers/arrayOf.js": {
       "imports": [],
