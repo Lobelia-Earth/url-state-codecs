@@ -1,6 +1,6 @@
 {
   "name": "@lobelia-earth/url-state-codecs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Codecs for encoding arbitrary state trees into URL parameters and back again.",
   "keywords": [
     "application state",
