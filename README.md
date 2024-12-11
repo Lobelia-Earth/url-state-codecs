@@ -20,9 +20,39 @@ The word “codec” is a portmanteau of “encoder” and “decoder”. Tradit
 - Allow developers to build and mix in their own custom value codecs.
 - Design an API that results in code that is easy to read and understand.
 
+## Example inputs and outputs
+
+Imagine a basic map application with the following default state:
+
+```ts
+const defaultState = {
+  center: [0, 0],
+  zoom: 0,
+  projection: 'EPSG:32662',
+};
+```
+
+Now imagine the user has made some changes to the application state and it now looks like this:
+
+```ts
+const newState = {
+  center: [0, -70],
+  zoom: 0,
+  projection: 'EPSG:16161',
+};
+```
+
+The `center` and `projection` values have changed from their defaults. URL State Codecs can encode those changes as URL (a.k.a query string) parameters:
+
+```txt
+c=0x-70&p=EPSG%253A16161
+```
+
+Here we’ve encoded the `center` tuple as an `"x"` delimited string. (The delimiter is configurable.) The `zoom` has not changed so there is no need to encode it. However, when we decode, we will always get a complete application state tree with default values supplied where corresponding URL parameters are omitted.
+
 ## Usage
 
-In the most basic example, you’ll want to create a state codec in your state initialization code:
+Typically, there is already a file with some state initialization code. In Redux, this might be `store.ts` but the setup is basically the same regardless of what state management library you’re using:
 
 ```ts
 import { defineState } from '@lobelia-earth/url-state-codecs';
@@ -55,22 +85,35 @@ if (!decodeResult.ok) {
 // ...Merge `decodeResult.data` into your application state...
 ```
 
-In your state update code, e.g. in a subscriber, add this code to automatically update your URL search parameters without adding an entry to the browser history:
+The merging of the decoded state into the current application state should be the only part of the integration that will be specific to the reactivity paradigm of your application. In a Redux context where objects are immutable and updates are made by creating new ones, you will likely need to define a new action that replaces your state (or the part of it that you are encoding) with the decoded state. Merging is simpler in other stores such as Pinia (`store.$patch()`), Vuex (`store.replaceState()`), svelte/store (`writableStore.set()`), and solid-js/stores (`setState()`).
+
+To synchronize updates to your application state with URL parameters, add a subscriber to your store:
 
 ```ts
-// Encodes only paramters that have changed from defaultState.
-const encodeResult = stateCodec.encodeAs.urlSearchString(currentState);
+const subscriberCallback = (newState) => {
+  // Encodes only parameters that have changed from defaultState.
+  const encodeResult = stateCodec.encodeAs.urlSearchString(newState);
 
-if (!encodeResult.ok) {
-  // ...Handle encoding error...
-}
+  if (!encodeResult.ok) {
+    // ...Handle encoding error...
+  }
 
-const newUrl = new URL(window.location.href);
-newUrl.search = encodeResult.data;
-window.history.replaceState(window.history.state, '', newUrl);
+  const newUrl = new URL(window.location.href);
+  newUrl.search = encodeResult.data;
+  window.history.replaceState(window.history.state, '', newUrl);
+};
 ```
 
-See [the demo directory](./src/demo) for additional examples written as end-to-end tests that are run as part of this package’s test suite.
+This is just a very basic example. In your case, you may want to additionally encode and decode:
+
+- Values deeply nested in your application state: `root.nested(property)`
+- ISO 8601 dates: `@lobelia-earth/url-state-codecs/iso8601Date`
+- Booleans: `@lobelia-earth/url-state-codecs/boolean`
+- Entire objects as base 64 strings: `@lobelia-earth/url-state-codecs/base64Json`
+- `NaN` (since `NaN` is disallowed by the number codec by default): `@lobelia-earth/url-state-codecs/wrappers/withNaN`
+- Any of the above as a nullable value:`@lobelia-earth/url-state-codecs/wrappers/nullable`
+
+...and others types of data. See [the demo directory](./src/demo) for more exhaustive examples written as end-to-end tests that are run as part of this package’s test suite.
 
 ## Contributing
 
