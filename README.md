@@ -2,6 +2,8 @@
 
 Codecs for encoding arbitrary state trees into URL parameters and back again.
 
+https://github.com/user-attachments/assets/873bda90-f52c-40da-8c71-a00a26bdf8cd
+
 ## What we mean by “codec”
 
 The word “codec” is a portmanteau of “encoder” and “decoder”. Traditionally, software engineers and computer scientists have used it in the context of data streams, particularly audio and video. We are using it in a broader sense of encoding and decoding discrete JavaScript application states to and from URL parameters. This is a common requirement in web cartography, which is what we do at [Lobelia Earth](https://lobelia.earth). Like many maps on the web, ours often need shareable URLs that include the state of that map, including such parameters as a latitude, longitude, zoom, and projection.
