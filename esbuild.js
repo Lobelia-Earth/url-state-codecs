@@ -16,6 +16,7 @@ const extensionlessPaths = [
   'codecs/iso8601DateCodec',
   'codecs/numberCodec',
   'codecs/stringCodec',
+  'codecs/unionOfLiterals',
   'codecs/wrappers/arrayOf',
   'codecs/wrappers/nullable',
   'codecs/wrappers/withDeflateRaw',

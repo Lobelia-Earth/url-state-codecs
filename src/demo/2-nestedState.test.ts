@@ -8,6 +8,7 @@ import nullable from '../codecs/wrappers/nullable';
 import base64JsonCodec from '../codecs/base64JsonCodec';
 import withRfc6902JsonPatch from '../codecs/wrappers/withRfc6902JsonPatch';
 import withDeflateRaw from '../codecs/wrappers/withDeflateRaw';
+import unionOfLiterals from '../codecs/unionOfLiterals';
 
 /**
  * Now let's try something a little more complicated.
@@ -16,7 +17,7 @@ interface NestedMapState {
   mapControls: {
     center: [lat: number, lon: number];
     zoom: number;
-    projection: string;
+    projection: 'EPSG:3857' | 'EPSG:32661' | 'EPSG:32761';
   };
   dataParameters: {
     startDate: Date | null;
@@ -87,7 +88,12 @@ describe('Demo: nested state', () => {
 
   const mc = mapControls.connect('center', 'mc', arrayOf(numberCodec, 'x', 2));
   const mz = mapControls.connect('zoom', 'mz', numberCodec);
-  const mp = mapControls.connect('projection', 'mp', stringCodec);
+
+  const projectionCodec = unionOfLiterals<
+    NestedMapState['mapControls']['projection']
+  >(['EPSG:3857', 'EPSG:32661', 'EPSG:32761']);
+  const mp = mapControls.connect('projection', 'mp', projectionCodec);
+
   const ds = dataParameters.connect('startDate', 'ds', nullableDateCodec);
   const de = dataParameters.connect('endDate', 'de', nullableDateCodec);
   const mls = root.connect('mapLayers', 'mls', compressedDiffCodec);

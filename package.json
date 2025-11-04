@@ -23,6 +23,7 @@
     "./iso8601Date": "./dist/codecs/iso8601DateCodec.js",
     "./number": "./dist/codecs/numberCodec.js",
     "./string": "./dist/codecs/stringCodec.js",
+    "./unionOfLiterals": "./dist/codecs/unionOfLiterals.js",
     "./wrappers/arrayOf": "./dist/codecs/wrappers/arrayOf.js",
     "./wrappers/nullable": "./dist/codecs/wrappers/nullable.js",
     "./wrappers/withDeflateRaw": "./dist/codecs/wrappers/withDeflateRaw.js",

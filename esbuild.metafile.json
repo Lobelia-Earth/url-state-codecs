@@ -147,6 +147,32 @@
       ],
       "format": "esm"
     },
+    "src/codecs/unionOfLiterals.ts": {
+      "bytes": 3461,
+      "imports": [
+        {
+          "path": "../lib/types",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "src/lib/result.ts",
+          "kind": "import-statement",
+          "original": "../lib/result"
+        },
+        {
+          "path": "src/codecs/stringCodec.ts",
+          "kind": "import-statement",
+          "original": "./stringCodec"
+        },
+        {
+          "path": "src/codecs/numberCodec.ts",
+          "kind": "import-statement",
+          "original": "./numberCodec"
+        }
+      ],
+      "format": "esm"
+    },
     "src/codecs/wrappers/arrayOf.ts": {
       "bytes": 4751,
       "imports": [
@@ -474,6 +500,34 @@
         }
       },
       "bytes": 432
+    },
+    "dist/codecs/unionOfLiterals.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 10900
+    },
+    "dist/codecs/unionOfLiterals.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "src/codecs/unionOfLiterals.ts",
+      "inputs": {
+        "src/lib/result.ts": {
+          "bytesInOutput": 49
+        },
+        "src/codecs/stringCodec.ts": {
+          "bytesInOutput": 321
+        },
+        "src/codecs/numberCodec.ts": {
+          "bytesInOutput": 595
+        },
+        "src/codecs/unionOfLiterals.ts": {
+          "bytesInOutput": 1069
+        }
+      },
+      "bytes": 2100
     },
     "dist/codecs/wrappers/arrayOf.js.map": {
       "imports": [],
