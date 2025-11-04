@@ -111,6 +111,7 @@ This is just a very basic example. In your case, you may want to additionally en
 - Values deeply nested in your application state: `root.nested(property)`
 - ISO 8601 dates: `@lobelia-earth/url-state-codecs/iso8601Date`
 - Booleans: `@lobelia-earth/url-state-codecs/boolean`
+- Unions of literal values: `@lobelia-earth/url-state-codecs/unionOfLiterals` (a factory function that creates a codec from array of literal values)
 - Entire objects as base 64 strings: `@lobelia-earth/url-state-codecs/base64Json`
 - `NaN` (since `NaN` is disallowed by the number codec by default): `@lobelia-earth/url-state-codecs/wrappers/withNaN`
 - Any of the above as a nullable value:`@lobelia-earth/url-state-codecs/wrappers/nullable`

@@ -33,6 +33,13 @@
    └ src/lib/result.ts           49b    11.3%
 
 
+  dist/codecs/unionOfLiterals.js    2.1kb  100.0%
+   ├ src/codecs/unionOfLiterals.ts  1.0kb   50.9%
+   ├ src/codecs/numberCodec.ts      595b    28.3%
+   ├ src/codecs/stringCodec.ts      321b    15.3%
+   └ src/lib/result.ts               49b     2.3%
+
+
   dist/codecs/wrappers/arrayOf.js    1.2kb  100.0%
    ├ src/codecs/wrappers/arrayOf.ts  1.1kb   91.1%
    └ src/lib/result.ts                49b     4.1%
