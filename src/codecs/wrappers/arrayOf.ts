@@ -59,6 +59,14 @@ const primitiveArraysAreEqual = <T extends Primitive>(
  * ```txt
  * ?center=42.4027x2.1563
  * ```
+ *
+ * Note that the separator type is intentionally constrained to minimize
+ * unintentional URL encoding and mitigate the risk of collisions
+ * between separators and data. If you really want to use a comma, you
+ * can use `'%2C'` - this is the same as how the browser will render it
+ * in the URL bar.
+ *
+ * @see https://datatracker.ietf.org/doc/html/rfc3986#section-2.2
  */
 const arrayOf = <
   T extends Primitive,
